@@ -1,15 +1,17 @@
-import logging
-
 import pytest
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-logging.basicConfig(level=logging.INFO)
-
 @pytest.fixture
 def driver():
     options = webdriver.ChromeOptions()
+    if os.getenv('CI') == "true":
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+
     driver = webdriver.Chrome(options=options)
 
     yield driver
@@ -30,7 +32,6 @@ def test_login_correct_credentials(driver):
     driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ENTER)
 
     assert "inventory.html" in driver.current_url
-    logging.info(f"\nCurrent URL contains 'inventory.html'")
 
 @pytest.mark.parametrize("username, password, error_message" , [
     ("wrong-user", "secret_sauce", "Epic sadface: Username and password do not match any user in this service"),
