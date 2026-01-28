@@ -2,15 +2,23 @@
 
 Denna uppgift innehåller automatiserade tester för att validera inloggningsfunktionen på saucedemo.com.
 
-#### Nödvändig mjukvara:
-- Python (rekommenderad Python-tolk: version 3.11)
-- IDE (PyCharm rekommenderas men det går med annan IDE med stöd för Python)
+Projektet har utvecklats med Python-version 3.11.7, men fungerar med valfri 3.11-version.
 
-#### Installationsguide:
-1. Klona ner repot lokalt
-2. Starta PyCharm och öppna upp projektet
-3. Öppna upp en terminal i PyCharm och utför följande kommandon:
-   - `python -m venv .venv` för att skapa en virtuell miljö för projektet
-   - `.venv\Scripts\activate` (för Win) alt. `source .venv/bin/activate` (Mac/Linux) för att aktivera miljön
-   - `pip install -r requirements.txt` för att installera beroenden
-4. Testen är nu redo att köras, antingen direkt i PyCharm eller terminalen med kommandot `pytest -v`
+#### Krav:
+Följande behöver installerat på datorn:
+- Python 3.11
+- Chrome
+- (IDE, tex PyCharm)
+
+#### Installationsguide (via `cmd`, System: Windows):
+1. Öppna kommandotolk och klona ner repot från GitHub, `git clone https://github.com/SleepyHeadTomi/YH02298-deluppgift-2.git`
+2. Gå in i projekt-mappen: `cd YH02298-deluppgift-2`
+3. Skapa virtuell miljö: `py -3.11 -m venv .venv`
+4. Aktivera miljö: `.venv\Scripts\activate`
+5. Installera paket: `pip install -r requirements.txt`
+6. Kör test med: `pytest -v`
+7. Deaktivera miljön efter körning: `deactivate`
+
+Då går även bra att utföra denna procedur i en IDE (PyCharm). Notera att steg 3-5 också behövs med detta utförande. 
+Öppna en terminal i IDE:n och kör steg 3 t.o.m steg 5 för att skapa och aktivera en virtuell miljö, samt för att 
+installera nödvändiga paket.
