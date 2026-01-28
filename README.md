@@ -19,6 +19,6 @@ Följande behöver installerat på datorn:
 6. Kör test med: `pytest -v`
 7. Deaktivera miljön efter körning: `deactivate`
 
-Då går även bra att utföra denna procedur i en IDE (PyCharm). Notera att steg 3-5 också behövs med detta utförande. 
+Det går även bra att utföra denna procedur i en IDE (PyCharm). Notera att steg 3-5 också behövs med detta utförande. 
 Öppna en terminal i IDE:n och kör steg 3 t.o.m steg 5 för att skapa och aktivera en virtuell miljö, samt för att 
 installera nödvändiga paket.
